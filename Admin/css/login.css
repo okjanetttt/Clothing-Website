@@ -1,0 +1,151 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+a{
+  display:inline-block;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.img-fluid{
+  max-width: 100%;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+/* Apply underline on hover */
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.cart-icon, .login-icon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/************************************************************ Login Section ********************************************************/
+.container-login {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 7%;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-col {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #000;
+}
+
+.intro-text {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.login-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.centered {
+    display: inline-block;
+}

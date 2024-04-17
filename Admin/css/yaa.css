@@ -1,0 +1,273 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap'); */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    display:inline-block;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.img-fluid{
+    max-width: 100%;
+}
+
+/******************************************************************** Header *****************************************************************/
+header{
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    width: 100%;
+    background-color: white;
+    box-shadow:  2px 4px 4px 1px rgba(0,0,0,0.1);
+    padding: 10px 90px;
+    z-index: 100;
+}
+
+header .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    display: inline-block;
+    margin-left: 20px;
+    color: #6C7178;
+    font-size: 18px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    color: #000000;
+    margin: 0 10px; /* Adjust the spacing as needed */
+}
+
+.account,.cart{
+    margin-top: 13px;
+    margin-left: 20px;
+    display: inline-block;
+    color: #6c7178;
+    font-size: 18px;
+}
+  
+.logo{
+    font-size: 28px;
+    line-height: 1.5;
+    color: #797979;
+}
+  
+.logo:hover{
+    text-decoration: none;
+}
+
+/************************************************************ Login Section ********************************************************/
+.container-login {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 7%;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-col {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #000;
+}
+
+.intro-text {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.login-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.centered {
+    display: inline-block;
+}
+
+/********************************************************************Footer-Section*****************************************************************/
+footer{
+   background-color: whitesmoke;
+   padding:50px 0px;
+   margin-top: 80px;
+
+}
+
+footer .container{
+    padding: 20px 0px;
+}
+
+h3{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+footer p{
+    font-size: 17px;
+    line-height: 1.33;
+}
+
+.form{
+    margin-top: 5px;
+}
+
+.input-email{
+    outline: 0px;
+    border:0.5px solid #444444;
+    padding: 10px 40px 10px 10px;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+
+.btn-dark{
+    font-family: inherit;
+    outline: none;
+    border: 0.5px solid #444444;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #444444;
+    color: white;
+}
+
+footer .row{
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-options{
+    border-bottom: 1px solid #dee2e6;
+}
+
+footer .col{
+    margin-bottom: 40px;
+}
+
+footer h4{
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #444444;
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer ul a{
+    font-size: 18px;
+    color: #000000;
+    line-height: 2;
+}
+
+footer ul a:hover{
+    color: #949494;
+}
+
+.social-media{
+    color: #b2b2b2;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.copyright{
+    font-size: 20px;
+    letter-spacing: 0.17px;
+    color: #b2b2b2;
+}
+
+/********************************************************************Media Querys*****************************************************************/
+@media screen and (max-width: 768px) {
+/* Adjust header styles for smaller screens */
+header {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    position: static;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .navbar a {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+   

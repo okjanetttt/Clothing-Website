@@ -1,0 +1,507 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the navigation bar is above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav ul li.active a {
+  border-bottom: 2px solid white;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+#menu-icon-top {
+    transition: transform 0.4s;
+}
+
+#menu-icon-middle {
+    transition: opacity 0.4s;
+}
+
+#menu-icon-bottom {
+    transition: transform 0.4s;
+}
+
+.show-menu #menu-icon-top {
+    transform: rotate(45deg);
+}
+
+.show-menu #menu-icon-middle {
+    opacity: 0;
+}
+
+.show-menu #menu-icon-bottom {
+    transform: rotate(-45deg);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+}
+
+.search-bar button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 10px;
+}
+
+.user-actions img {
+    max-width: 30px;
+}
+
+/******************************************************ViewPage ************************************************/
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.product-card a {
+    text-decoration: none;
+}
+
+/* Left side image styles */
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.big-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.small-img img {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* Add styles for the quantity input field */
+.quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* .quantity p {
+    margin: 10px 0;
+} */
+
+
+/* Add to Cart Button */
+.btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+/* Go Back Button */
+.go-back-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 14px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Right side details styles */
+.right {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    height: 600px; /* Set the desired height */
+}
+
+.right .small-img {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.right .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.url {
+    margin-top: 10px;
+    color: #8d8b8b;
+}
+
+.pname {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.pdesc {
+    font-size: 18px;
+    color: #4e4545;
+}
+
+.ratings {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.size {
+    margin-bottom: 10px;
+}
+
+.psize {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.psize.active {
+    background-color: #e91e63;
+    color: white;
+}
+
+.quantity {
+    margin-bottom: 10px;
+}
+
+.btn-box {
+    margin-right: 16%;
+}
+
+.cart-btn {
+    padding: 5px 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .flex-box {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+}
+
+/* Adjust the layout for larger screens */
+@media (min-width: 769px) {
+    .flex-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .left {
+        width: 40%;
+    }
+
+    .right {
+        width: 55%;
+    }
+}
+
+/********************************************************** Footer ************************************************/
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem; /* Add padding for spacing around the content */
+}
+
+.footer__heading {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.footer__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background-color: rgb(0, 0, 0);
+}
+
+.footer__col p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 0px;
+}
+
+.footer__col p:hover {
+  color: black;
+}
+
+.footer__col p i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.footer__bar {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: black;
+}
+
+.footer__form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 0.8rem;
+}
+
+.footer__form .btn {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon for smaller screens */
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .user-actions {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul a {
+        color: #fff;
+    }
+
+    .show-menu {
+        display: flex; /* Show the menu when the 'show-menu' class is applied */
+    }
+}
+
+/* Adjust the grid layout for larger screens */
+@media (min-width: 768px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__col {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Further adjustments for even larger screens (e.g., desktop) */
+@media (min-width: 1200px) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__col {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Make the social icons responsive */
+.social-icons a {
+  font-size: 1.5rem; /* Increase font size for better visibility on mobile */
+}
+
+/* Adjust the newsletter and copyright layout for larger screens */
+@media (min-width: 768px) {
+  .footer__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .newsletter {
+    margin-right: 2rem; /* Add some space between the newsletter and copyright */
+  }
+}

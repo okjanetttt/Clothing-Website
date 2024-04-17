@@ -1,0 +1,198 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+a{
+  display:inline-block;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.img-fluid{
+  max-width: 100%;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+/* Apply underline on hover */
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.cart-icon, .login-icon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/************************************************************* Siddebar Section ***************************************************************/
+#sidebar {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 35px;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.block-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    flex: 1;
+    min-width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+ul.nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 12%;
+}
+
+ul.nav li {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+ul.nav li:hover {
+    background-color: #555;
+}
+
+ul.nav li.active {
+    background-color: #4CAF50;
+}
+
+ul.nav li.active:hover {
+    background-color: #45a049;
+}
+
+ul.nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+ul.nav li.active a {
+    color: #f2f2f2;
+}
+
+/*************************************************************** Users Section *****************************************************************/
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 20%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #333;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+}
+
+.btn-info {
+    background-color: #5bc0de;
+}

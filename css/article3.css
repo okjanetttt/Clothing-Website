@@ -1,0 +1,511 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the navigation bar is above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav ul li.active a {
+  border-bottom: 2px solid white;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+#menu-icon-top {
+    transition: transform 0.4s;
+}
+
+#menu-icon-middle {
+    transition: opacity 0.4s;
+}
+
+#menu-icon-bottom {
+    transition: transform 0.4s;
+}
+
+.show-menu #menu-icon-top {
+    transform: rotate(45deg);
+}
+
+.show-menu #menu-icon-middle {
+    opacity: 0;
+}
+
+.show-menu #menu-icon-bottom {
+    transform: rotate(-45deg);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+}
+
+.search-bar button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 10px;
+}
+
+.user-actions img {
+    max-width: 30px;
+}
+
+/**************************************************************** Artcle 3  **********************************************************************/
+.container {
+  max-width: 1200px;
+}
+
+.heading-1 {
+  display: flex;
+  font-size: 40px;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.heading-2 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.heading-3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.sub-heading p {
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+
+.sub-heading span {
+  color: #555;
+  font-weight: 300;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+.sub-heading .importent {
+  color: crimson;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/***************************************************************** HOME *******************************************************************/
+.home {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.home-img {
+  width: 65%;
+  margin-left: 20%;
+}
+
+.home p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-right: 9%;
+
+}
+
+.list img {
+  width: 100%;
+  height: 100px;
+}
+
+/***************************************************************** ADs **********************************************************************/
+
+
+/**************************************************************** ARTICLE ********************************************************************/
+article > p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  hyphens: auto;
+}
+
+article p:first-child::first-line {
+  font-size: 18px;
+}
+
+/************************************************************* Fadshion Show IMAGES **************************************************************/
+.fashion-imgs1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.fashion-imgs1 img {
+  height: 700px;
+  width: 600px;
+}
+
+.fashion-imgs1 p {
+  margin-left: 10%;
+}
+
+.fashion-imgs2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.fashion-imgs2 img {
+  height: 700px;
+  width: 600px;
+}
+
+.fashion-imgs2 p {
+  margin-left: 10%;
+}
+
+.fashion-imgs3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.fashion-imgs3 img {
+  height: 700px;
+  width: 600px;
+}
+
+.fashion-imgs3 p {
+  margin-left: 10%;
+}
+
+.fashion-imgs4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.fashion-imgs4 img {
+  height: 700px;
+  width: 600px;
+}
+
+/* .fashion-imgs4 p {
+  margin-left: 10%;
+} */
+
+.cards {
+  columns: 25ch 3;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.card {
+  font-size: 20px;
+  border: 1px solid;
+  padding: 10px 20px;
+  break-inside: avoid;
+}
+
+@media (max-width: 950px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .list {
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .card {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+/********************************************************** Footer ************************************************/
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem; /* Add padding for spacing around the content */
+}
+
+.footer__heading {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.footer__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background-color: rgb(0, 0, 0);
+}
+
+.footer__col p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 0px;
+}
+
+.footer__col p:hover {
+  color: black;
+}
+
+.footer__col p i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.footer__bar {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: black;
+}
+
+.footer__form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 0.8rem;
+}
+
+.footer__form .btn {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon for smaller screens */
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .user-actions {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul a {
+        color: #fff;
+    }
+
+    .show-menu {
+        display: flex; /* Show the menu when the 'show-menu' class is applied */
+    }
+}
+
+/* Adjust the grid layout for larger screens */
+@media (min-width: 768px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__col {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Further adjustments for even larger screens (e.g., desktop) */
+@media (min-width: 1200px) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__col {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Make the social icons responsive */
+.social-icons a {
+  font-size: 1.5rem; /* Increase font size for better visibility on mobile */
+}
+
+/* Adjust the newsletter and copyright layout for larger screens */
+@media (min-width: 768px) {
+  .footer__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .newsletter {
+    margin-right: 2rem; /* Add some space between the newsletter and copyright */
+  }
+}

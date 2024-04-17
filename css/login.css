@@ -1,0 +1,191 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the navigation bar is above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav ul li.active a {
+  border-bottom: 2px solid white;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+#menu-icon-top {
+    transition: transform 0.4s;
+}
+
+#menu-icon-middle {
+    transition: opacity 0.4s;
+}
+
+#menu-icon-bottom {
+    transition: transform 0.4s;
+}
+
+.show-menu #menu-icon-top {
+    transform: rotate(45deg);
+}
+
+.show-menu #menu-icon-middle {
+    opacity: 0;
+}
+
+.show-menu #menu-icon-bottom {
+    transform: rotate(-45deg);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+}
+
+.search-bar button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 10px;
+}
+
+.user-actions img {
+    max-width: 30px;
+}
+
+/****************************************** Login Form *******************************************************/
+.container-login {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 7%;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-col {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #000;
+}
+
+.intro-text {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.login-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.centered {
+    display: inline-block;
+}

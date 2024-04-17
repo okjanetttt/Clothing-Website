@@ -1,0 +1,333 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+a{
+  display:inline-block;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.img-fluid{
+  max-width: 100%;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+/* Apply underline on hover */
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 8px 2px 10px 40px; /* Adjusted padding for the icon */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #999;
+}
+
+/* Style for the Font Awesome icon */
+.search-container::before {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.cart-icon, .login-icon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/********************************************* Article Header ********************************************/
+header {
+    background: #000; 
+    color: #fff8f8;
+    text-align: center;
+    padding: 5px; /* Adjust the top and bottom padding to increase or decrease the height */
+}
+
+.heading-1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Letter spacing for a modern look */
+}
+
+.sub-heading {
+    font-size: 18px;
+    margin-top: 20px;
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.important {
+    font-weight: bold;
+    /* color: #ff6a00; Highlight color */
+    margin-top: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article {
+    max-width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.heading-2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.intro {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.interview-container {
+    max-width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.interview {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 300px; /* Corrected max-width */
+    height: auto;
+    margin: 10px;
+}
+
+/********************************************* AD Section ********************************************/
+
+/********************************************* Footer Section ********************************************/
+footer {
+    background-color: whitesmoke;
+    padding:50px 0px;
+}
+  
+footer .container-footer {
+padding: 20px 0px;
+}
+
+h3 {
+margin-bottom: 10px;
+font-size: 30px;
+font-weight: 500;
+}
+
+footer p {
+font-size: 17px;
+line-height: 1.33;
+}
+
+.form {
+margin-top: 5px;
+}
+
+.input-email {
+outline: 0px;
+border:0.5px solid #444444;
+padding: 10px 40px 10px 10px;
+font-family: inherit;
+margin-bottom: 10px;
+}
+
+.btn-dark {
+font-family: inherit;
+outline: none;
+border: 0.5px solid #444444;
+padding: 10px 30px;
+cursor: pointer;
+background-color: #444444;
+color: white;
+}
+
+footer .row {
+padding: 50px 0px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.footer-options {
+border-bottom: 1px solid #dee2e6;
+}
+
+footer .col {
+margin-bottom: 40px;
+}
+
+footer h4 {
+font-size: 26px;
+margin-bottom: 20px;
+color: #444444;
+}
+
+footer ul li {
+list-style: none;
+}
+
+footer ul a {
+font-size: 18px;
+color: #000000;
+line-height: 2;
+}
+
+footer ul a:hover {
+color: #949494;
+}
+
+/************** Navbar Styles for Small Screens ***************/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links */
+    }
+
+    .navbar-right {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    /* Add a menu icon for the mobile view */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Display the search container below the menu icon */
+    .search-container {
+        margin-top: 20px;
+    }
+
+    /* Style for the search icon */
+    .search-container::before {
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
+/************************** Footer Styles for Small Screens *********************/
+@media (max-width: 768px) {
+    footer .row {
+        flex-direction: column; /* Stack the columns vertically */
+        align-items: center;
+    }
+
+    .footer-options {
+        border-bottom: none; /* Remove the border for small screens */
+    }
+
+    footer .col {
+        margin-bottom: 20px; /* Reduce the margin between columns */
+    }
+
+    footer h4 {
+        font-size: 20px; /* Reduce the font size for headings */
+    }
+
+    footer ul a {
+        font-size: 16px; /* Reduce the font size for links */
+    }
+
+    /* Adjust the padding and font size for the form elements */
+    .input-email {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-dark {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
